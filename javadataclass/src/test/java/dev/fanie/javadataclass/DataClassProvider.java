@@ -1,6 +1,6 @@
 package dev.fanie.javadataclass;
 
-public class DataClassProvider {
+class DataClassProvider {
 
     Data getEmptyData() {
         return new Data();
