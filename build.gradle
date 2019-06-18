@@ -1,0 +1,53 @@
+ext {
+    Bintray = [
+            GROUP_ID: 'dev.fanie',
+
+            REPO: 'fanie.dev',
+            NAME: 'javadataclass',
+
+            DESCRIPTION: 'Kotlin data class functionality for Java',
+
+            WEBSITE: 'https://github.com/iFanie/Java-DataClass',
+            GIT: 'https://github.com/iFanie/Java-DataClass.git',
+
+            DEV_ID: 'iFanie',
+            DEV_NAME: 'Fanie Veizis',
+            DEV_EMAIL: 'fanieveizis@gmail.com',
+
+            LICENCE: 'The Apache Software License, Version 2.0',
+            LICENCE_URL: 'http://www.apache.org/licenses/LICENSE-2.0.txt',
+            LICENCES: [ "Apache-2.0" ]
+    ]
+
+    Version = [
+            Build : [
+                    CODE    : 1,
+                    MAJOR   : 0,
+                    MINOR   : 1
+            ]
+    ]
+}
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.1'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
